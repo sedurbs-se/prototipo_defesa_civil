@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Page</title>]
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        #map {
+            height: 600px;
+            width: 1200px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 24px;
+        }
+        #pnMunicipios{
+            margin-top:24px;
+        }
+    </style>
+</head>
+<div class="container">
+    <div id="map" style="flex:0.6"></div>
+    <div style="flex:0.4">
+        <ul class="list-group" >
+            <li class="list-group-item list-group-item-action list-group-item-danger">Ocorrência 1</li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                Ocorrência 2
+                <span class="badge badge-primary badge-pill">14</span>
+              </li>
+            <li class="list-group-item">Ocorrência 3</li>
+            <li class="list-group-item">Ocorrência 4</li>
+        </ul>
+        <div class="row"  id="pnMunicipios"></div>
+    </div>
+
+</div>
+    <body>
+        
+        
+    </body>
+    <script src="index.js"></script>
+   <script src="https://maps.googleapis.com/maps/api/js?callback=initMap&key=AIzaSyAdAmN4FLzLuxVoKk-isILdI2OTb6sn07E"></script>
+ </html>
+
