@@ -20,10 +20,12 @@ const municipios = [
 ]
 
 municipios.forEach(municipio => {
+  const numeroOcorrencias = Math.random()
   document.getElementById('pnMunicipios').innerHTML += `
-  <li class="list-group-item">
-          <a href="#" class="btn btn-primary" onclick="loadMap('${municipio.name}')">${municipio.readable_name}</a>
-      </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  <a href="formularios" target="_blank" >${municipio.readable_name}</a>
+  <span class="badge badge-primary badge-pill">${Math.ceil((numeroOcorrencias*10))}</span>
+</li>
   `
 }
   )
@@ -38,14 +40,16 @@ function initMap() {
         zoom: 8
     });
 
-    loadMap('tobias_barreto')
+    loadMap('tobias_barreto');
+    loadMap('ns_dores');
+    loadMap('ns_socorro');
 
 }
 
 function loadMap(name){
 
 
-  clearMap()
+  //clearMap()
 
   var polygon = new google.maps.Polygon({
     paths:delimiters[name],
@@ -77,7 +81,6 @@ polygon.setMap(map)
 polygons_on_map.push(polygon)
 
 map.panTo(delimiters[name][0])
-map.setZoom(9)
 }
 
 function clearMap(){
