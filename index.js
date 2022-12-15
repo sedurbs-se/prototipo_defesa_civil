@@ -63,7 +63,7 @@ polygon.addListener('click', function(event) {
     <h5>${municipios.find(m => m.name === name).readable_name}</h5>
     <span>2 ocorrências em andamento</span>
     <br>
-    <a href="prototipo_defesa_civil/formularios">Formulários</a>
+    <a href="formularios">Formulários</a>
     </div>
     
     `,
