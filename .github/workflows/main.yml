@@ -8,16 +8,16 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      -name: Get latest code
-      uses: actions/checkout@v2
+      - name: Get latest code
+        uses: actions/checkout@v2
 
-      -name: Sync files
-      uses:  SamKirkland/FTP-Deploy-Action@4.0.0
-      with:
-        server: ${{ secrets.ftp_host }}
-        username: ${{ secrets.ftp_user }}
-        password: ${{ secrets.ftp_password }}
-        server-dir: opt/var/www/html/
-        proxy: http://proxy.sedurb.gov-se:8080
-        proxy_username: thiagofreire.carvalho
-        proxy_password: Th7th6b6*
+      - name: Sync files
+        uses:  SamKirkland/FTP-Deploy-Action@4.0.0
+        with:
+          server: ${{ secrets.ftp_host }}
+          username: ${{ secrets.ftp_user }}
+          password: ${{ secrets.ftp_password }}
+          server-dir: opt/var/www/html/
+          proxy: http://proxy.sedurb.gov-se:8080
+          proxy_username: thiagofreire.carvalho
+          proxy_password: Th7th6b6*
